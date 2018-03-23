@@ -1,8 +1,45 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome  {{ title }}!
   </h1>
+  <nav>
+    <a routerLink="/heroes">Heroes</a>
+  </nav>
+  <!-- 1st <a href="http://example.com" style="display: none;">unseen</a> link.<br />
+2nd <a href="http://example.com" style="visibility: hidden;">unseen</a> link.<br />
+3rd <a href="http://example.com" style="opacity: 0;">unseen</a> link. -->
+ 
+  <!-- <div> 
+      <input type="text" name="modelname1" [value]="modelname1" [(ngModel)]="modelname1">
+      {{modelname1}}
+      <input type="text" name="modelname2" bind-value="modelname2" [(ngModel)]="modelname2">
+      {{modelname2}}
+      <input type="text" name="modelname3" [(ngModel)]="modelname3" (click)="modelClick();">
+      {{modelname3}}
+      <input type="text" name="modelname4" [(ngModel)]="modelname4" on-click="modelClick2();">
+      {{modelname4}}
+    </div> -->
+
+    <!-- <input type="text"  name="name" (keyup)="display($event)">
+    {{result}}<br>
+    SPAN  <span [innerHtml]="result"></span> -->
+    <!-- <app-heroes></app-heroes>  -->
+    <input #heroInput>
+    {{heroInput.value}}
+
+    <p><span>"{{evilTitle}}" is the <i>interpolated</i> evil title.</span></p>
+<p>"<span [innerHTML]="evilTitle"></span>" is the <i>property bound</i> evil title.</p>
+    <h1>Directive</h1>
+    <div>
+      <input type="radio" name="colors" (click)="color='lightgreen'">Green
+      <input type="radio" name="colors" (click)="color='yellow'">Yellow
+      <input type="radio" name="colors" (click)="color='cyan'">Cyan
+    </div>
+    <p appColorBkgound [highlightbycolor]='color'>Highlight me!</p>
+    <span [innerHtml]="checkInnerHtml"></span>
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+   
 </div>
-
-
